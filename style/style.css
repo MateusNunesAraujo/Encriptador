@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+}
+
+
+body{
+background-color: #E5E5E5;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+}
+
+#logo img{
+    width: 120px;
+    height: 48px;
+}
+
+.advertencia img{
+width: 16px;
+height: 16px;
+}
+
+.advertencia{
+    color: #495057;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.contenedor-encriptador{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+}
+
+.contenedor-texto{
+    height: 680px;
+    width: 680px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+#mensaje{
+    color: #0A3871;
+    font-size: 32px;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 50px;
+    height: 80%;
+    resize: none;
+}
+
+#mensaje:focus{
+    outline:none;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.botones button{
+    font-size: 16px;
+height: 60px;
+width: 328px;
+}
+
+#encriptar{
+    border-radius: 24px;
+    border-style: none;
+    color: #fff;
+background-color: #0A3871;
+}
+
+#desencriptar{
+    border-radius: 24px;
+    color: #0A3871;
+    background-color: transparent;
+    border-style: groove;
+border-color: #0A3871;
+}
+
+.bandeja{
+    box-shadow: 5px 5px 8px 2px #00000036;
+    max-width: 320px;
+    max-height: 670px;
+    padding: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+}
+
+#mensaje-bandeja{
+    display: flex;
+    width: 95%;
+    height: 90%;
+    flex: 768;
+    justify-content: center;
+}
+
+#mensaje-bandeja img{
+    width: 250px;
+}
+
+#sin-mensaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sin-mensaje div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#copiar{
+    font-size: 16px;
+    border-radius: 24px;
+background-color: transparent;
+border-style: groove;
+border-color: #0A3871;
+color: #0A3871;
+
+}
+
+#cont-mensaje-en-bandeja{
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; 
+    gap: 10px;
+}
+
+#mensaje-bandeja button{
+    height: 62px;
+}
+
+#mensaje-en-bandeja{
+    font-size: 24px;
+    color: #495057;
+    text-align: left;
+    height: 90%;
+    overflow: auto;
+}
+
+/* Responsive */
+
+@media (max-width:780px){
+    main{
+        height: 100%;
+        }
+    .contenedor-encriptador {
+        margin-top: 70px;
+        justify-items: center;
+        grid-template-columns:1fr;
+    }
+
+    .bandeja{
+        
+        width: 90%;
+        margin-bottom: 20px;
+        height: 350px;
+        max-width: 680px;
+    }
+}
+
+@media (max-width:475px) {
+
+    #mensaje-bandeja button{
+        height: 60px;
+    }
+
+    #mensaje-en-bandeja{
+        font-size: 16px;
+    }
+
+    
+
+    .bandeja{
+        
+        width: 90%;
+        margin-bottom: 20px;
+        height: 350px;
+    }
+
+    .botones{
+        grid-template-columns:1fr;
+        justify-items: center;
+    }
+
+    .botones button{
+    width: 300px;
+    }
+
+    #mensaje{
+        width: 90%;
+    font-size: 20px;
+    padding: 10px;
+    }
+
+    #mensaje-bandeja{
+    width: 100%;
+    }
+
+    #mensaje-bandeja img {
+        width: 200px;
+    }
+
+    #logo{
+        top: 20px;
+    left: 0px;
+    }
+
+    #logo img{
+        width: 80px;
+        height: 30.03px;
+    }
+
+    .contenedor-texto {
+        width: 100%;
+        height: 560px;
+        align-items: center;
+    }
+}
