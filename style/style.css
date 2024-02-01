@@ -170,7 +170,9 @@ color: #0A3871;
     color: #495057;
     text-align: left;
     height: 90%;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto; /* o 'scroll', según tus preferencias */
+    word-wrap: break-word;
 }
 
 /* Responsive */
@@ -186,11 +188,9 @@ color: #0A3871;
     }
 
     .bandeja{
-        
         width: 90%;
         margin-bottom: 20px;
         height: 350px;
-        max-width: 680px;
     }
 }
 
