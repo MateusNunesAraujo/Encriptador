@@ -4,7 +4,7 @@ let desencriptarBtn = document.querySelector('#desencriptar');
 let mensajeBandeja = document.querySelector('#mensaje-bandeja');
 let copiarBtn = document.querySelector('#copiar');
 let palabra_encriptada = ''; 
-const rectificacion = /[A-Z-ÁÉÍÓÚÜáéíóúü]/g;
+const rectificacion = /[0-9A-Z-ÁÉÍÓÚÜáéíóúü#$@"'()\[\]{}+*~^-_.:,;<>?¿¡|°¬=&%]/g;
 
 
 eventos();
