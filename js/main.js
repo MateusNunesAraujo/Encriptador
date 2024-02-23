@@ -46,10 +46,12 @@ function encriptamiento() {
         let copiarBtn = document.querySelector('#copiar');
         copiarBtn.addEventListener('click', copiarContenido);
     }else{
-      document.querySelector('#cont-advertencia').classList.add('mensaje-activado')
-      setTimeout(() => {
-        document.querySelector('#cont-advertencia').classList.remove('mensaje-activado')
-      }, 3000);
+        swal({
+            title: "¡Tu mensaje contiene algún error!",
+            text: "Tu mensaje contiene mayuscula,caracteres especiales y/o letras con acentos",
+            icon: "warning",
+            buttons: "Entiendo...",
+          });
     }
     
 }
@@ -68,7 +70,7 @@ function desencriptamiento() {
         const regex = new RegExp(Object.keys(sustituciones).join('|'), 'g');
     
         // Realizar el reemplazo utilizando la función de sustitución
-        textoDesencriptado = textoDesencriptado.replace(regex, (match) => sustituciones[match.toLowerCase()]);
+        textoDesencriptado = textoDesencriptado.replace(regex, (match) => sustituciones[match]);
         // Actualizar el contenido de mensajeBandeja
         mensajeBandeja.innerHTML = `<div id='cont-mensaje-en-bandeja'><p id='mensaje-en-bandeja'>${textoDesencriptado}</p> <button id="copiar">Copiar</button></div>`;
     
@@ -83,10 +85,13 @@ function copiarContenido() {
     let contenidoParaCopiar = document.getElementById('mensaje-en-bandeja').textContent;
 
     navigator.clipboard.writeText(contenidoParaCopiar).then(()=>{
-        document.querySelector('#cont-mensaje-copiado').classList.add('mensaje-activado')
-        setTimeout(() => {
-          document.querySelector('#cont-mensaje-copiado').classList.remove('mensaje-activado')
-        }, 3000);
+        swal({
+            title: "¡Elemento copiado!",
+            text: "texto copiado al portapapeles",
+            icon: "success",
+            buttons:false,
+            timer: 1800
+          });
     }).catch((err)=>{
         console.log('Algo ocurrio al momento de copiar: ', err);
     })
