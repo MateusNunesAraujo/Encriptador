@@ -3,17 +3,24 @@ let encriptarBtn = document.querySelector('#encriptar');
 let desencriptarBtn = document.querySelector('#desencriptar');
 let mensajeBandeja = document.querySelector('#mensaje-bandeja');
 let copiarBtn = document.querySelector('#copiar');
+let cierreRedesSocialesBtn = document.querySelector('#btn-redes-sociales');
 let palabra_encriptada = ''; 
 const rectificacion = /[0-9A-Z-ÁÉÍÓÚÜáéíóúü#$@"'()\[\]{}+*~^-_.:,;<>?¿¡|°¬=&%]/g;
+let veces = 0
 
-
+document.addEventListener('DOMContentLoaded',()=>{
+document.querySelector('#cont-redes-sociales').classList.add('mensaje-activado')
+})
 eventos();
 
 function eventos() {
     encriptarBtn.addEventListener('click', encriptamiento);
     desencriptarBtn.addEventListener('click', desencriptamiento);
+    cierreRedesSocialesBtn.addEventListener('click',cierreRedesSociales);
+    document.querySelector('#contactame').addEventListener('click',()=>{
+        document.querySelector('#cont-redes-sociales').classList.add('mensaje-activado')
+    })
 }
-
 /* Proceso de encriptamiento de la palabra que digite el usuario */
 function encriptamiento() {
     palabra_encriptada = '';
@@ -55,7 +62,6 @@ function encriptamiento() {
     }
     
 }
-
 function desencriptamiento() {
     let textoDesencriptado = mensaje.value;
         const sustituciones = {
@@ -96,4 +102,18 @@ function copiarContenido() {
         console.log('Algo ocurrio al momento de copiar: ', err);
     })
 }
+function cierreRedesSociales() {
+    veces++
+    document.querySelector('#cont-redes-sociales').classList.remove('mensaje-activado')
+    document.querySelector('#contactame').classList.add('contactame-activado')
+    if(veces <= 1){
+        document.querySelector('#contactame').classList.add('sombra')
+    setTimeout(() => {
+        document.querySelector('#contactame').classList.remove('sombra')
+    }, 2000);
+
+    }
+    
+}
+
 

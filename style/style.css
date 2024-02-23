@@ -10,7 +10,65 @@
 
 .swal-text {
     text-align: center;
-  }
+}
+
+
+#cont-redes-sociales {
+    transition: 0.3s top;
+    height: 300px;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -1000px;
+
+}
+
+#redes-sociales {
+    gap: 20px;
+    display: flex;
+    font-size: 18px;
+    width: 400px;
+    height: 170px;
+    color: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    box-shadow: 5px 5px 6px 2px #00000036;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#redes-sociales h3 {
+    color: #0a3871;
+}
+
+
+.grupo-imagenes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#redes-sociales img {
+    width: 35px;
+}
+
+#redes-sociales button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 24px;
+    border-style: none;
+    color: #fff;
+    height: 35px;
+    width: 100px;
+    background-color: #0A3871;
+}
 
 body {
     background-color: #E5E5E5;
@@ -21,6 +79,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#contactame {
+    cursor: pointer;
+    transition: 1s all;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 55px;
+    height: 55px;
 }
 
 #logo {
@@ -87,6 +156,7 @@ main {
 }
 
 .botones button {
+    cursor: pointer;
     font-size: 16px;
     height: 60px;
     width: 328px;
@@ -147,6 +217,7 @@ main {
 }
 
 #copiar {
+    cursor: pointer;
     font-size: 16px;
     border-radius: 24px;
     background-color: transparent;
@@ -186,6 +257,7 @@ main {
 /* Responsive */
 
 @media (max-width:780px) {
+
     /* #advertencia, #mensaje-copiado{
     left: 30%;
     margin-top: 250px;
@@ -209,6 +281,17 @@ main {
 }
 
 @media (max-width:475px) {
+
+    #contactame{
+        top: 12px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #redes-sociales{
+    width: 250px;
+    }
 
     #mensaje-bandeja button {
         height: 60px;
@@ -266,6 +349,14 @@ main {
 }
 
 /* Clases de activación */
-.mensaje-activado{
-top: 0 !important;
+.mensaje-activado {
+    top: 0 !important;
+}
+
+.contactame-activado{
+   opacity: 1 !important;
+}
+
+.sombra{
+    filter: drop-shadow(1px 1px 10px #0a3871);
 }

@@ -7,22 +7,41 @@
     <link rel="stylesheet" href="style/style.css">
 
     <meta property="og:title" content="ENCRIPTADOR: ESCRIBE MENSAJES DE FORMA ENCRIPTADA">
-    <meta property="og:description" content="¡Escribe y comparte mensajes encriptados con tus amigos, como también desencriptar lo que te envién!">
-    <meta property="og:image" content="https://mateusnunesaraujo.github.io/Encriptador/resources/ai-generated-8061342_1280.jpg">
+    <meta property="og:description"
+        content="¡Escribe y comparte mensajes encriptados con tus amigos, como también desencriptar lo que te envién!">
+    <meta property="og:image"
+        content="https://mateusnunesaraujo.github.io/Encriptador/resources/ai-generated-8061342_1280.jpg">
     <meta property="og:url" content="https://mateusnunesaraujo.github.io/Encriptador/" />
     <link rel="icon" href="./resources/binary-code.png" type="image/x-icon">
     <title>Encriptador</title>
 </head>
 
 <body>
+    <div id="cont-redes-sociales">
+        <div id="redes-sociales">
+            <h3>¡Mis redes sociales!</h3>
+            <div class="grupo-imagenes">
+                <a href="https://linkedin.com/in/nunes-araujo-ivan-mateus"><img src="./resources/linkedin.png" alt=""></a>
+                <a href="https://github.com/MateusNunesAraujo/"><img src="./resources/github.png" alt=""></a>
+                <a href="https://www.instagram.com/matteuz_n/"><img src="./resources/instagram.png" alt=""></a>
+            </div>
+            <div>
+                <button id="btn-redes-sociales">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
     <main>
+        <img id="contactame" src="./resources/user.png" alt="">
         <div id="logo">
             <img src="./resources/Logo.png" alt="">
         </div>
         <div class="contenedor-encriptador">
             <div class="contenedor-texto">
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe aquí"></textarea>
-                <div class="advertencia"><img src="./resources/Vector.png" alt=""><p>Solo letra minusculas y sin acentos</p></div>
+                <div class="advertencia"><img src="./resources/Vector.png" alt="">
+                    <p>Solo letra minusculas y sin acentos</p>
+                </div>
                 <div class="botones">
                     <button id="encriptar">Encriptar</button>
                     <button id="desencriptar">Desencriptar</button>
@@ -37,7 +56,7 @@
                             <p>Ingrese el texto que desee encriptar o desencriptar</p>
                         </div>
                     </div>
-                 <!--    <button id="copiar">Copiar</button> -->
+                    <!--    <button id="copiar">Copiar</button> -->
                 </div>
             </div>
         </div>
