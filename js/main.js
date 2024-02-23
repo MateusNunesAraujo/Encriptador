@@ -6,7 +6,7 @@ let copiarBtn = document.querySelector('#copiar');
 let cierreRedesSocialesBtn = document.querySelector('#btn-redes-sociales');
 let palabra_encriptada = ''; 
 const rectificacion = /[0-9A-Z-ÁÉÍÓÚÜáéíóúü#$@"'()\[\]{}+*~^-_.:,;<>?¿¡|°¬=&%]/g;
-let veces = 0
+let cantidadPrecionado = 0
 
 document.addEventListener('DOMContentLoaded',()=>{
 document.querySelector('#cont-redes-sociales').classList.add('mensaje-activado')
@@ -103,10 +103,10 @@ function copiarContenido() {
     })
 }
 function cierreRedesSociales() {
-    veces++
+    cantidadPrecionado++
     document.querySelector('#cont-redes-sociales').classList.remove('mensaje-activado')
     document.querySelector('#contactame').classList.add('contactame-activado')
-    if(veces <= 1){
+    if(cantidadPrecionado <= 1){
         document.querySelector('#contactame').classList.add('sombra')
     setTimeout(() => {
         document.querySelector('#contactame').classList.remove('sombra')
